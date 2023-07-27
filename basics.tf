@@ -1,3 +1,4 @@
+# Terraform configuration:
 terraform {
   required_version = "~> 1.3.0"
 
@@ -9,10 +10,12 @@ terraform {
   }
 }
 
+# Providers
 provider "azurerm" {
   features {}
 }
 
+# Resources
 resource "azurerm_resource_group" "first-rg" {
   name     = "rg-terraforming"
   location = "centralus"
